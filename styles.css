@@ -1,0 +1,319 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: white;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Arial", sans-serif;
+  font-weight: 700;
+  color: black;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  position: relative;
+  /* text-align: center; */
+  display: inline-block;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 3px;
+  background: #000;
+  position: absolute;
+  /* left: 50%; */
+  bottom: -10px;
+  /* transform: translateX(-50%); */
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 15px;
+  font-weight: 300;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #555;
+}
+
+ul {
+  list-style-position: inside;
+  margin-bottom: 15px;
+}
+
+/* Header styles */
+header {
+  padding: 100px 0 50px;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin-top: 20px;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  font-weight: 500;
+  padding: 5px 0;
+  position: relative;
+}
+
+nav ul li a:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #000;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+nav ul li a:hover:after {
+  width: 100%;
+}
+
+/* Section styles */
+section {
+  /* text-align: center; */
+  padding: 50px 0;
+  /* border-bottom: 1px solid #eee; */
+}
+
+/* About section */
+.about-content {
+  /* max-width: 800px; */
+  margin: 0 auto;
+  text-align: justify;
+  line-height: 1.8;
+}
+
+.about-content p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.about-content p strong {
+  font-weight: 600;
+}
+
+/* Projects section */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 3rem;
+}
+
+.project-card {
+  background: #f9f9f9;
+  padding: 25px;
+  border-radius: 5px;
+  height: auto;
+  width: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.technologies {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.links {
+  margin-bottom: 15px;
+}
+
+.links p {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+/* Experience section */
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.experience-card {
+  background: #f9f9f9;
+  padding: 25px;
+  border-radius: 5px;
+  text-align: left;
+}
+
+.company {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.duration {
+  color: #666;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+/* Education section */
+.education-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.education-table th,
+.education-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.education-table th {
+  font-weight: 600;
+  background-color: #f5f5f5;
+}
+
+/* Skills section */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.skill-category {
+  margin-bottom: 20px;
+}
+
+.skill-category p {
+  margin-bottom: 10px;
+}
+
+/* Contact section */
+.contact-table {
+  width: 100%;
+  max-width: 600px;
+}
+
+.contact-table td {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.contact-table td:first-child {
+  width: 100px;
+  font-weight: 500;
+}
+
+.contact-icons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.contact-icons a {
+  font-size: 32px; /* Icon Size */
+  color: black; /* Icon Color */
+  transition: color 0.3s, transform 0.2s;
+}
+
+.contact-icons a:hover {
+  color: #0077b5; /* LinkedIn Blue */
+  transform: scale(1.1);
+}
+
+/* Footer styles */
+footer {
+  padding: 30px 0;
+  text-align: center;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  .projects-grid,
+  .experience-grid,
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+
+  .education-table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+  }
+}
